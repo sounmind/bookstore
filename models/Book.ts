@@ -1,7 +1,12 @@
+export interface Price {
+  amount: number;
+  currency: string;
+}
+
 export interface Book {
   id: number;
-  name: string;
-  price: number;
+  title: string;
+  price: Price;
   category: string;
   description: string;
 }
