@@ -1,3 +1,5 @@
+import { StoreProvider } from "../store/provider";
+
 export const metadata = {
   title: "Bookstore",
   description: "Bookstore",
@@ -10,7 +12,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <StoreProvider>
+        <body>{children}</body>
+      </StoreProvider>
     </html>
   );
 }
